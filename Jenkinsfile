@@ -1,24 +1,18 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'M3'
-    }
-
     stages {
-
-        stage('Checkout Git') {
+        stage('Validate Maven') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/Monika-Karthikeyan-24/SumArray.git'
+                bat 'mvn -version'
             }
         }
 
-        stage('Maven Build') {
+        stage('Build') {
             steps {
-                bat 'mvn validate'
+                bat 'mvn package -DskipTests'
             }
         }
-
     }
 }
+

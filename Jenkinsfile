@@ -2,17 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Validate Maven') {
+        stage('Maven Test') {
             steps {
-                bat 'mvn -version'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                bat 'mvn package -DskipTests'
+                bat 'mvn clean test'
             }
         }
     }
 }
-

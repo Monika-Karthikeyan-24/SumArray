@@ -1,6 +1,6 @@
 package com.example;
 
-public class SumArray {
+public class ArraySum {
 
     public int findSum(int[] arr) {
         int sum = 0;

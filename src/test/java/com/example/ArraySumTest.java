@@ -3,9 +3,9 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SumArrayTest {
+public class ArraySumTest {
 
-    SumArray obj = new SumArray();
+    ArraySum obj = new ArraySum();
 
     @Test
     public void testSum() {
